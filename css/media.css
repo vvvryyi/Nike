@@ -1,0 +1,34 @@
+@media (max-width:992px) {
+    .nav__links {
+      background-color: var(--color3);
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 150px;
+      transition: 0.5s;
+    }
+    .nav__links.active {
+        left: 0;
+    }
+
+    .nav__links a {
+        color: var(--color2);
+        font-weight: 900;
+    }
+
+    .nav__buttons {
+        position: fixed;
+        bottom: 100px;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        left: 100%;
+    }
+    .hamburger {
+        display: block;
+    }
+}

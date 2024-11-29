@@ -1,0 +1,133 @@
+body {
+    font-family: "Comfortaa", sans-serif;
+    --color1: #313131;
+    --color2: #FEFFF6;
+    --color3: #828E42;
+    --color4: #E3E3E3;
+    --color5: #D5D79E;
+    background-color: var(--color2);
+    margin: 0;
+}
+
+nav {
+    background-color: var(--color2);
+    box-shadow: 0 0 20px 0 var(--color3);
+    border-radius: 0 0 20px 20px;
+    padding: 14px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.container {
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav__elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    z-index: 5;
+}
+.nav__logo path {
+    fill: var(--color3);
+    transition: 0.5s;
+}
+.nav__logo.active path {
+    fill: var(--color2);
+}
+
+.nav__links {
+    display: flex;
+    gap: 64px;
+    z-index: 4;
+
+}
+
+.nav__links a {
+    text-decoration: none;
+    color: var(--color1);
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav__links a:hover {
+    color: var(--color3);
+}
+
+
+.nav__buttons {
+    display: flex;
+    gap: 20px;
+    z-index: 5;
+}
+
+.nav__buttons button {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: var(--color1);
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.nav__buttons button:hover {
+    color: var(--color3);
+
+}
+
+.nav__buttons .user {
+    font-size: 40px;
+}
+.hamburger {
+    display: none;
+    width: 40px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    position: relative;
+    z-index: 5;
+}
+.hamburger span {
+    display: block;
+    height: 2px;
+    width: 40px;
+    background-color: var(--color3);
+    border-radius: 2px;
+    left: 0;
+    position: absolute;
+    transition: 0.5s;
+}
+.hamburger span:nth-child(1) {
+    top: 0;
+    
+}
+.hamburger span:nth-child(2) {
+    top: 9px;
+}
+.hamburger span:nth-child(3) {
+    top: 18px;
+}
+
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.hamburger.active span {
+    background-color: var(--color2);
+}
