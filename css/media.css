@@ -27,7 +27,14 @@
         align-items: center;
         width: 100%;
         left: 100%;
+        transition: 0.5s;
     }
+
+    .nav__buttons.active {
+        left: 0%;
+        
+    }
+
     .hamburger {
         display: block;
     }
