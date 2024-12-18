@@ -3,10 +3,11 @@ body {
     --color1: #313131;
     --color2: #FEFFF6;
     --color3: #828E42;
-    --color4: #E3E3E3;
+    --color4: #5C5C5C;
     --color5: #D5D79E;
     background-color: var(--color2);
     margin: 0;
+    color: var(--color1);
 }
 
 nav {
@@ -47,7 +48,6 @@ nav {
     display: flex;
     gap: 64px;
     z-index: 4;
-
 }
 
 .nav__links a {
@@ -130,4 +130,114 @@ nav {
 
 .hamburger.active span {
     background-color: var(--color2);
+}
+
+header {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.header__elements {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+.header__icon {
+    width: 100%;
+    max-width: 572px;
+}
+.header__icon img {
+    width: 100%;
+}
+.header__info {
+    max-width: 520px;
+}
+.header__elements h1 {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 32px;
+
+}
+.text_green {
+    color: var(--color3);
+}
+.header__info a {
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--color3);
+    border-radius: 40px;
+    font-size: 20px;
+    color: var(--color2);
+    padding: 20px 45px;
+    display: inline-block;
+    border: 1px solid var(--color3);
+    transition: all 0.3s ease;
+    margin-bottom: 63px;
+}
+.header__info a:hover {
+    background-color: var(--color2);
+    color: var(--color3);
+}
+
+.header__info > p {
+    line-height: 24px;
+    font-size: 16px;
+    margin: 0px 0px 56px 0px;
+}
+.statistic {
+    display: inline flex;
+    gap: 25px;
+    
+}
+.statistic div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.statistic span {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--color3);
+}
+.statistic p {
+    font-size: 32px;
+    font-weight: 100;
+    color: var(--color4);
+    margin: 0;
+}
+.raiting-cross {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+.raiting-cross__number {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+.raiting-cross__number span {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color4);
+}
+.raiting-cross__number hr {
+    background-color: var(--color3);
+    height: 40px;
+    width: 1px;
+
+}
+.raiting-cross__number .stars {
+    display: flex;
+    gap: 8px;
+    color: var(--color3);
+    font-size: 24px;
+}
+.raiting-cross p {
+    font-weight: 100;
+    font-size: 24px;
+    color: var(--color4);
+    margin: 0;
 }
