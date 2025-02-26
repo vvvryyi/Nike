@@ -5,9 +5,20 @@ body {
     --color3: #828E42;
     --color4: #5C5C5C;
     --color5: #D5D79E;
+    --color6: #E3E3E3;
     background-color: var(--color2);
     margin: 0;
     color: var(--color1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    font-family: "Comfortaa", sans-serif;
 }
 
 nav {
@@ -19,6 +30,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 10;
 }
 
 .container {
@@ -36,10 +48,12 @@ nav {
 .nav__logo {
     z-index: 5;
 }
+
 .nav__logo path {
     fill: var(--color3);
     transition: 0.5s;
 }
+
 .nav__logo.active path {
     fill: var(--color2);
 }
@@ -85,6 +99,7 @@ nav {
 .nav__buttons .user {
     font-size: 40px;
 }
+
 .hamburger {
     display: none;
     width: 40px;
@@ -94,6 +109,7 @@ nav {
     position: relative;
     z-index: 5;
 }
+
 .hamburger span {
     display: block;
     height: 2px;
@@ -104,13 +120,16 @@ nav {
     position: absolute;
     transition: 0.5s;
 }
+
 .hamburger span:nth-child(1) {
     top: 0;
-    
+
 }
+
 .hamburger span:nth-child(2) {
     top: 9px;
 }
+
 .hamburger span:nth-child(3) {
     top: 18px;
 }
@@ -142,25 +161,31 @@ header {
     align-items: end;
     justify-content: space-between;
 }
+
 .header__icon {
     width: 100%;
     max-width: 572px;
 }
+
 .header__icon img {
     width: 100%;
 }
+
 .header__info {
     max-width: 520px;
 }
+
 .header__elements h1 {
     font-size: 64px;
     font-weight: bold;
     margin-bottom: 32px;
 
 }
+
 .text_green {
     color: var(--color3);
 }
+
 .header__info a {
     text-decoration: none;
     font-weight: bold;
@@ -174,70 +199,441 @@ header {
     transition: all 0.3s ease;
     margin-bottom: 63px;
 }
+
 .header__info a:hover {
     background-color: var(--color2);
     color: var(--color3);
 }
 
-.header__info > p {
+.header__info>p {
     line-height: 24px;
     font-size: 16px;
     margin: 0px 0px 56px 0px;
 }
+
 .statistic {
     display: inline flex;
     gap: 25px;
-    
+
 }
+
 .statistic div {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
 }
+
 .statistic span {
     font-size: 32px;
     font-weight: bold;
     color: var(--color3);
 }
+
 .statistic p {
     font-size: 32px;
     font-weight: 100;
     color: var(--color4);
     margin: 0;
 }
+
 .raiting-cross {
     display: flex;
     flex-direction: column;
     gap: 15px;
     align-items: center;
 }
+
 .raiting-cross__number {
     display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: center;
 }
+
 .raiting-cross__number span {
     font-size: 24px;
     font-weight: bold;
     color: var(--color4);
 }
+
 .raiting-cross__number hr {
     background-color: var(--color3);
     height: 40px;
     width: 1px;
 
 }
+
 .raiting-cross__number .stars {
     display: flex;
     gap: 8px;
     color: var(--color3);
     font-size: 24px;
 }
+
 .raiting-cross p {
     font-weight: 100;
     font-size: 24px;
     color: var(--color4);
     margin: 0;
+}
+
+
+
+
+.about-us {
+    padding: 80px 0px;
+}
+
+.about-us__elements {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-us__img {
+    flex-shrink: 0;
+    width: 100vw;
+    max-width: 520px;
+    height: 100vw;
+    max-height: 520px;
+    background-color: var(--color5);
+    position: relative;
+    border-radius: 20px;
+
+}
+
+.about-us__img img {
+    width: 122.5%;
+    position: absolute;
+    right: -5%;
+    top: -10%;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-us__info>p {
+    font-size: 16px;
+    color: var(--color4);
+    line-height: 24px;
+
+}
+
+.about-us__info>p {
+    margin-bottom: 44px;
+
+}
+
+.reward__info h3 {
+    margin-bottom: 16px;
+}
+
+.reward {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.reward i {
+    width: 100px;
+    height: 100px;
+    background: var(--color5);
+    color: var(--color3);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    border-radius: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.categoria {
+    padding: 80px 0px;
+}
+
+.categoria h2 {
+    margin-bottom: 60px;
+}
+
+.categoria__buttons button {
+    border-radius: 60px;
+    color: var(--color3);
+    padding: 10px 40px;
+    background-color: var(--color2);
+    color: var(--color3);
+    border: 1px solid var(--color3);
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+
+.categoria__buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 13px;
+    flex-wrap: wrap;
+}
+
+.categoria__buttons .active {
+    background-color: var(--color3);
+    color: var(--color2);
+}
+
+.sneakers-card {
+    max-width: 400px;
+    box-shadow: 0 2px 10px 0px var(--color5);
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sneakers-card__img {
+    background-color: var(--color6);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sneakers-card__img img {
+    width: 70%;
+}
+
+.sneakers-card__text {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.sneakers-card__name {
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: space-between;
+
+}
+
+.sneakers-card__name h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sneakers-card__name span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sneakers-card__info p {
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--color4);
+    margin-bottom: 16px;
+}
+
+.sneakers-card__rating {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 38px;
+
+}
+
+.sneakers-card__rating .stars {
+    color: var(--color3);
+
+}
+
+.sneakers-card__text button {
+    border-radius: 80px;
+    color: var(--color3);
+    border: 1px var(--color3) solid;
+    font-size: 20px;
+    background-color: var(--color2);
+    font-weight: bold;
+    width: 100%;
+    height: 60px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.sneakers-card__text button.active {
+    background-color: var(--color3);
+    color: var(--color2);
+}
+
+.sneakers-card__text button:hover {
+    background-color: var(--color3);
+    color: var(--color2);
+}
+
+.sneakers-list {
+    padding: 28px 20px;
+    display: flex;
+    overflow-x: scroll;
+    gap: 20px;
+}
+
+.sneakers-list::-webkit-scrollbar {
+    height: 8px;
+
+}
+
+.sneakers-list::-webkit-scrollbar-thumb {
+    height: 8px;
+    background-color: var(--color3);
+    border-radius: 8px;
+}
+
+.new-models {
+    padding: 80px 0px;
+}
+
+.new-models h2 {
+    margin-bottom: 20px;
+}
+
+.new-models__list {
+    display: flex;
+    gap: 110px;
+    overflow-x: scroll;
+    padding: 100px 20px 20px 20px;
+    overflow-y: hidden;
+
+}
+.new-models__list::-webkit-scrollbar {
+    height: 8px;
+
+}
+.new-models__list::-webkit-scrollbar-thumb {
+    height: 8px;
+    background-color: var(--color3);
+    border-radius: 8px;
+}
+.new-models-card {
+    width: 340px;
+    height: 220px;
+    transition: 0.5s;
+    position: relative;
+    flex-shrink: 0;
+
+}
+.new-models-card__bg {
+    width: 340px;
+    height: 220px;
+    background-color: #B7A997;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+.new-models-card:hover .new-models-card__bg {
+    height: 320px;
+
+}
+
+.new-models-card img {
+    width: 82%;
+    rotate: -30deg;
+    position: absolute;
+    top: 32%;
+    right: -15%;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.new-models-card:hover img {
+    width: 82%;
+    rotate: 0deg;
+    position: absolute;
+    top: 20px;
+    right: 9%;
+}
+
+.new-models-card__info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    top: 20px;
+    left: 20px;
+    max-width: 200px;
+    transition: 0.5s;   
+}
+
+.new-models-card__info h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color2);
+}
+
+.new-models-card__info p {
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--color2);
+}
+.new-models-card__raiting {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color2);
+}
+
+.new-models-card__raiting hr {
+    height: 16px;
+    width: 1px;
+    background-color: var(--color2);
+    font-weight: bold;
+    border: none;
+}
+.new-models-card:hover .new-models-card__info {
+    top: 158px;
+}
+
+.new-models-card__button {
+    width: 106px;
+    height: 34px;
+    background-color: var(--color2);
+    border: none;
+    border-radius: 80px;
+    color: var(--color3);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 16px;
+    transition: 0.5s;
+    border: 1px solid ;
+}
+
+.new-models-card__button:hover {
+    background-color: transparent;
+    color: var(--color2) !important;
+
+}
+
+.new-models-card:hover .new-models-card__button {
+    width: calc(100% - 40px);
+}
+
+.new-models-card__button.active {
+    background-color: transparent;
+    color: var(--color2) !important;
 }

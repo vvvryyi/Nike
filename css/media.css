@@ -49,5 +49,37 @@
     .statistic p {
         font-size: 24px;
     }
+    .about-us__elements {
+        flex-direction: column-reverse;
+    }
+    .about-us__info h2 {
+        text-align: center;
+    }
+    .about-us__info > p {
+        text-align: center;
+    }
+    .about-us__info {
+        max-width: 520px;
+    }
+    .about-us__img {
+        width: calc(100vw - 40px);
+        height: calc(100vw - 40px);
+    }
+
+    .sneakers-list {
+        width: calc(100% + 40px);
+        transform: translateX(-20px);
+    }
+    
+    .new-models__list { 
+        width: calc(100% + 40px);
+        transform: translateX(-20px);
+    }
+}
+
+@media (max-width: 500px) {
+    .sneakers-card {
+        width: calc(100vw - 60px);
+    }
 }
     
